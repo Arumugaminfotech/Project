@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tringapps</title>
+    <link rel="stylesheet"  href="task4.css">
+</head>
+<body>
+    <div class="head">
+        <h1>Welcome to tringapps</h1>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <label class="label-name" for="name">Name:</label>
+            <input type="text" id="nametxt" placeholder="Enter your name" required />
+        </div>
+        <div>
+            <label class="label-name">Gender:</label>
+            <input type="radio" id="female" name="gender" value="female"><label for="female" class="abc">Female</label>
+            <input type="radio" id="male" name="gender" value="male"><label for="male" class="abc">Male</label>
+        </div>
+        <div>
+            <label class="label-name">Date Of Birth:</label>
+            <input type="date" name="dob" id="dob">
+        </div>
+        <div>
+            <label for="nationlity" class="label-name">Nationality</label>
+            <select id="nationlitydd">
+                <option value="indian">Indian</option>
+                <option value="pakistan">Pakistani</option>
+                <option value="chinese">Chinese</option>
+                <option value="american">American</option>
+            </select>
+        </div>
+        <div>
+            <label for="language" class="label-name">Language:</label>
+            <input type="checkbox" value="english" name="lang" id="englishchk" class="chk" /><label for="english">English</label>
+            <input type="checkbox" value="Tamil" name="lang" id="tamilchk" class="chk" /><label for="hindi">Tamil</label>
+            <input type="checkbox" value="malayalam" name="lang" id="malayalamchk" class="chk" /><label for="kanada">malayalam</label>
+            <input type="checkbox" value="Telugu" name="lang" id="teluguchk" class="chk" /><label for="punjabi">Telugu</label>
+        </div>
+        <div>
+            <label for="mailtxt" class="label-name">E-mail:</label>
+            <input type="email" name="mail" id="mailtxt" required placeholder="abc@tringapps.com" />
+        </div>
+        <div>
+            <label for="degree" class="label-name">Degree:</label>
+            <input type="text" name="degree" id="degree" placeholder="UG/PG" />
+        </div>
+        <div>
+            <label for="add" class="label-name">address:</label>
+            <textarea id="add" placeholder="Add your address"></textarea>
+        </div>
+        <br>
+
+        <div class="button">
+            <button type="submit" onclick="savedata();">Save</button>
+            <button type="reset"  value="reset">Reset</button>
+        </div>
+    </form>
+    <div class="datahead">
+        <h3>data</h3>
+    </div>
+            <table id="form_result">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Nationality</th>
+                    <th>Language</th>
+                    <th>Email</th>
+                    <th>Degree</th>
+                    <th>Address</th>
+                    <th>Update</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script  type="text/javascript" src="task4.js"></script>
+
+</body>
+</html>
