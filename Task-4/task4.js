@@ -94,7 +94,7 @@
     }
   
     function onEdit(td) {
-    if (confirm('Are you sure to edit this Row data ?')) {
+    if (confirm('To edit this row make sure the updated details are entered in this form')) {
         row = td.parentElement.parentElement;
         document.getElementById('form_result').deleteRow(row.rowIndex);
         var nationaldd = document.getElementById("nationlitydd");
