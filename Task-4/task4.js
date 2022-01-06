@@ -40,21 +40,6 @@
 
 
     }
-    function editer() {
-        var nationaldd = document.getElementById("nationalitydd");
-        data = {
-           "name": document.querySelector('#nametxt').value,
-           "gender": getRadioValue('gender'),
-           "dob": document.getElementById('dob').value,
-           "nationality": nationaldd.options[nationaldd.selectedIndex].text,
-           "lang": getCheckBox('lang').value,
-           "email": document.getElementById('mailtxt').value,
-           "degree" : document.getElementById('degree').value,
-           "add": document.getElementById('add').value,
-       }
-       console.log(data);   
-       editrow();
-    }
     
 
     function createtablerow() {
@@ -145,8 +130,4 @@
         resetForm();
     }
 }
-    function edit1(td) {
-        row = td.parentElement.parentElement;
-        document.getElementById('form_result').deleteRow(row.rowIndex);
-        
-    }
+   
