@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    padding: 20px;
+    background-color: aqua;
+}
+h1{
+    padding: 20px;
+    background-color:azure;
+}
+</style>
+
+<body>
+   <center><h1>Choose the files</h1></center>
+   <div id="bod">
+   <center><label for="file">choose image:</label>
+   <input type="file"  accept="image/*" name="image" id="image"  onchange="imgpath1()" required>
+   <center><label for="file">choose json:</label>
+   
+   <input type="file"  accept=".json" name="jason" id="json" required>
+
+   <center><a href="miniprojectpage2.html"><input type="submit" id="submit" value="submit" ></a></center>
+</div>
+    
+</body>
+<script>
+    function imgpath1(){
+    const imgPath = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+
+reader.addEventListener("load", function () {
+    localStorage.setItem("image", reader.result);
+}, false);
+
+if (imgPath) {
+  reader.readAsDataURL(imgPath);
+}
+}
+document.getElementById("json").addEventListener("change", function() {
+            var file_to_read = document.getElementById("json").files[0];
+            var fileread = new FileReader();
+            fileread.onload = function(e) {
+                var content = e.target.result;
+                var data = JSON.parse(content);
+                window.localStorage.setItem("myObject", JSON.stringify(data));
+            };
+            fileread.readAsText(file_to_read);
+        });
+    
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        border-left: 100px;
+        background-color:antiquewhite;
+    }
+</style>
+<body>
+   <center><h1>Welcome to tringapps</h1></center>
+   <center> <img alt="hello" id="image" width="500"></center>
+   <center><h3></h3></center>
+    
+<script>
+    let img = document.getElementById('image');
+    console.log(img);
+    img.src = localStorage.getItem('image');
+    let newObject = window.localStorage.getItem("myObject");
+        var obj = JSON.parse(newObject);
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                var tag = document.createElement("h3");
+                tag.setAttribute("class", "json-content");
+                var text = document.createTextNode(key + " : " + obj[key]);
+                tag.appendChild(text);
+                var element = document.getElementsByTagName("body")[0];
+                element.appendChild(tag);
+            }
+        }
+</script>
+</body>
+</html>
