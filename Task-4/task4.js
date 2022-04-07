@@ -92,7 +92,7 @@
             "add": document.getElementById('add').value,
         }
         console.log(data);      
-        table = document.getElementById('form_result');    
+        var table = document.getElementById('form_result');    
          //Add the data rows.
             row = table.insertRow(-1);
 
