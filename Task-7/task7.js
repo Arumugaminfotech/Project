@@ -1,9 +1,9 @@
 var btns = document.querySelectorAll('.btn');
 var storeProducts = document.querySelectorAll('.store-product');
 
-for (var i = 0; i < btns.length; i++) {
+for (let i of btns) {
 
-    btns[i].addEventListener('click', (e) => {
+    i.addEventListener('click', (e) => {
         e.preventDefault()
         
         const filter = e.target.dataset.filter;
