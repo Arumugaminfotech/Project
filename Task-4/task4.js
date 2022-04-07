@@ -44,9 +44,7 @@
 
     function createtablerow() {
 
-        table = document.getElementById('form_result');    
-        var columnCount = table.rows[0].cells.length;
-
+        var table = document.getElementById('form_result');    
          //Add the data rows.
             row = table.insertRow(-1);
 
@@ -61,7 +59,7 @@
             var cell9 = row.insertCell(-1);
             
 
-            cell1.innerHTML = data.name;;
+            cell1.innerHTML = data.name;
             cell2.innerHTML = data.gender
             cell3.innerHTML = data.dob;
             cell4.innerHTML = data.nationality;
@@ -95,8 +93,6 @@
         }
         console.log(data);      
         table = document.getElementById('form_result');    
-        var columnCount = table.rows[0].cells.length;
-
          //Add the data rows.
             row = table.insertRow(-1);
 
@@ -109,7 +105,7 @@
             var cell7 = row.insertCell(-1);
             var cell8 = row.insertCell(-1);
             var cell9 = row.insertCell(-1);
-        cell1.innerHTML = data.name;;
+        cell1.innerHTML = data.name;
         cell2.innerHTML = data.gender
         cell3.innerHTML = data.dob;
         cell4.innerHTML = data.nationality;
