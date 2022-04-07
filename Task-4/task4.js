@@ -76,6 +76,6 @@
         row = td.parentElement.parentElement;
         document.getElementById('form_result').deleteRow(row.rowIndex);
         resetForm();
-    }
+    } 
 }
    
