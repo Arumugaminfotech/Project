@@ -1,15 +1,6 @@
     var checkedValue = [];
     var row;
-    var  data = {
-            "name": document.querySelector('#nametxt').value,
-            "gender": getRadioValue('gender'),
-            "dob": document.getElementById('dob').value,
-            "nationality": nationaldd.options[nationaldd.selectedIndex].text,
-            "lang": getCheckBox('lang'),
-            "email": document.getElementById('mailtxt').value,
-            "degree" : document.getElementById('degree').value,
-            "add": document.getElementById('add').value,
-        };
+    var data;
 
     function getRadioValue(theRadioGroup) {
         var elements = document.getElementsByName(theRadioGroup);
@@ -44,6 +35,16 @@
         row = td.parentElement.parentElement;
         document.getElementById('form_result').deleteRow(row.rowIndex);
         var nationaldd = document.getElementById("nationlitydd");
+         data = {
+            "name": document.querySelector('#nametxt').value,
+            "gender": getRadioValue('gender'),
+            "dob": document.getElementById('dob').value,
+            "nationality": nationaldd.options[nationaldd.selectedIndex].text,
+            "lang": getCheckBox('lang'),
+            "email": document.getElementById('mailtxt').value,
+            "degree" : document.getElementById('degree').value,
+            "add": document.getElementById('add').value,
+        }
         console.log(data);      
         var table = document.getElementById('form_result');    
          //Add the data rows.
